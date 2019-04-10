@@ -13,12 +13,12 @@ RSpec.describe ItemCollection do
 
   it 'should total all the values and return' do
     items = [
-        Item.new(200, "perfume", 3, true),
-        Item.new(50, "slipper", 1, false),
-        Item.new(150, "shoes", 1, false)
+        Item.new(200, 'perfume', 3, true),
+        Item.new(50, 'slipper', 1, false),
+        Item.new(150, 'shoes', 1, false)
     ]
     collection = ItemCollection.new(items)
     expect(collection.total_value).to eq(910)
   end
-  
+
 end

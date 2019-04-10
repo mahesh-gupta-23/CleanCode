@@ -11,9 +11,9 @@ class ItemCollection
     tax = 0.0
     return tax if @items.nil?
 
-    @items.each do |current|
-      tax += current.base_tax
-      tax += current.import_tax
+    @items.each do |item|
+      tax += item.base_tax
+      tax += item.import_tax
     end
     tax.round(2)
   end
