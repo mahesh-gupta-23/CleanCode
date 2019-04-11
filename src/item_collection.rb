@@ -28,5 +28,19 @@ class ItemCollection
     value.round(2)
   end
 
+  def descriptions
+    descriptions = []
+    @items.each do |item|
+      descriptions.push(description(item))
+    end
+    descriptions
+  end
+
+  private
+
+  def description(item)
+    "#{item.description_text}: #{item.value}"
+  end
+
 end
 

@@ -9,8 +9,8 @@ class Receipt
 
   def print
     receipt_text = ''
-    @items.items.each do |item|
-      receipt_text += "#{description(item)} \n"
+    @items.descriptions.each do |description|
+      receipt_text += "#{description} \n"
     end
     receipt_text += "#{sales_tax} \n"
     receipt_text += total
@@ -19,10 +19,6 @@ class Receipt
   end
 
   private
-
-  def description(item)
-    "#{item.description_text}: #{item.value}"
-  end
 
   def total
     "Total: #{@items.total_value}"
